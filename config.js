@@ -23,6 +23,15 @@ function getConfig(env) {
             helperAccount: 'testnet',
         };
         break;
+    case 'statelessnet':
+        config = {
+            networkId: 'statelessnet',
+            nodeUrl: process.env.NEAR_STATELESSNET_RPC || 'https://rpc.statelessnet.near.org',
+            walletUrl: process.env.NEAR_STATELESSNET_WALLET || 'https://statelessnet.mynearwallet.com',
+            helperUrl: 'https://helper.statelessnet.near.org',
+            helperAccount: 'statelessnet',
+        };
+        break;
     case 'custom':
         config = {
             networkId: 'custom',
